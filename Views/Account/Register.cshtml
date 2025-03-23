@@ -1,0 +1,78 @@
+﻿@* Views/Account/Register.cshtml *@
+@model DataValidationProject.Models.UserRegistration
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h2>Register - Pattern Validation Demo</h2>
+                <p class="mb-0">This form demonstrates pattern-based validation techniques</p>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <h5>Validation Concepts Demonstrated:</h5>
+                    <ul>
+                        <li><strong>RegularExpression validation</strong> - Username and phone number must match specific patterns</li>
+                        <li><strong>EmailAddress validation</strong> - Email must be in a valid format</li>
+                        <li><strong>Password complexity</strong> - Password must meet strength requirements</li>
+                        <li><strong>Compare validation</strong> - Password confirmation must match password</li>
+                        <li><strong>Remote validation</strong> - Username availability is checked against a list</li>
+                    </ul>
+                </div>
+
+                <form asp-action="Register" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Username" class="form-label"></label>
+                            <input asp-for="Username" class="form-control" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                            <small class="form-text text-muted">Try entering "admin" to see remote validation</small>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="ConfirmPassword" class="form-label"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="PhoneNumber" class="form-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        <small class="form-text text-muted">Format: (123) 456-7890 or 123-456-7890</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Demos</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
