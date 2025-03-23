@@ -1,0 +1,23 @@
+﻿@* Views/Account/LoginSuccess.cshtml *@
+@{
+    ViewData["Title"] = "Login Successful";
+}
+
+<div class="container">
+    <div class="alert alert-success mt-4">
+        <h4 class="alert-heading">Login Successful!</h4>
+        <p>Your form was submitted successfully because all validation rules passed.</p>
+        <hr>
+        <p class="mb-0">The validation attributes on the UserLogin model ensured that:</p>
+        <ul>
+            <li>Both username and password were provided</li>
+            <li>The username was between 3 and 50 characters</li>
+            <li>The password was at least 6 characters long</li>
+        </ul>
+    </div>
+
+    <div class="mt-3">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary me-2">Try Login Again</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Back to Demos</a>
+    </div>
+</div>

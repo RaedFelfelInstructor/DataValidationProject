@@ -1,8 +1,138 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "ASP.NET MVC Validation Demo";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron">
+    <h1>ASP.NET MVC Validation Demo</h1>
+    <p class="lead">Learn how to implement effective validation in ASP.NET MVC applications through practical examples.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-primary text-white">
+                <h3>Basic Validation</h3>
+            </div>
+            <div class="card-body">
+                <p>Learn how to implement essential validation including required fields, string length constraints, and data type validation.</p>
+                <p>This section covers:</p>
+                <ul>
+                    <li>Required attribute</li>
+                    <li>StringLength attribute</li>
+                    <li>DataType validation</li>
+                    <li>Error message customization</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Login", "Account")" class="btn btn-primary">Login Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h3>Pattern Validation</h3>
+            </div>
+            <div class="card-body">
+                <p>Explore pattern-based validation for complex data formats like email addresses, phone numbers, and custom patterns.</p>
+                <p>Key concepts include:</p>
+                <ul>
+                    <li>RegularExpression attribute</li>
+                    <li>Email validation</li>
+                    <li>Password complexity</li>
+                    <li>Compare attribute for confirmation</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Register", "Account")" class="btn btn-success">Registration Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-info text-white">
+                <h3>Advanced Data Validation</h3>
+            </div>
+            <div class="card-body">
+                <p>Learn validation techniques for specific data types including dates, numbers, and other specialized inputs.</p>
+                <p>Features demonstrated:</p>
+                <ul>
+                    <li>Date validation (past/future)</li>
+                    <li>Range validation for numbers</li>
+                    <li>Phone number formatting</li>
+                    <li>Optional vs. required fields</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Profile", "User")" class="btn btn-info">Profile Demo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-warning">
+                <h3>Custom Validation</h3>
+            </div>
+            <div class="card-body">
+                <p>Discover how to create custom validation logic for complex business rules and scenarios that go beyond standard attributes.</p>
+                <p>This section explores:</p>
+                <ul>
+                    <li>Custom validation attributes</li>
+                    <li>Conditional validation rules</li>
+                    <li>Business logic validation</li>
+                    <li>Dynamic validation requirements</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Create", "Task")" class="btn btn-warning">Task Creation Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-danger text-white">
+                <h3>Cross-Property Validation</h3>
+            </div>
+            <div class="card-body">
+                <p>Learn how to validate multiple properties in relation to each other, ensuring data consistency across the model.</p>
+                <p>Advanced techniques covered:</p>
+                <ul>
+                    <li>IValidatableObject implementation</li>
+                    <li>Date range validation</li>
+                    <li>Interdependent field validation</li>
+                    <li>Model-level validation vs. property-level</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("Create", "Project")" class="btn btn-danger">Project Details Demo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h3>Learning Path</h3>
+            </div>
+            <div class="card-body">
+                <p>For the best learning experience, we recommend following the examples in this order:</p>
+                <ol>
+                    <li>Start with <strong>Basic Validation</strong> to understand the fundamentals</li>
+                    <li>Move to <strong>Pattern Validation</strong> for more complex input requirements</li>
+                    <li>Explore <strong>Advanced Data Validation</strong> for specific data type handling</li>
+                    <li>Learn <strong>Custom Validation</strong> techniques for specialized business rules</li>
+                    <li>Master <strong>Cross-Property Validation</strong> for model-level consistency</li>
+                </ol>
+                <p>Each demo builds on concepts from previous sections, providing a comprehensive understanding of ASP.NET MVC validation.</p>
+            </div>
+        </div>
+    </div>
 </div>
