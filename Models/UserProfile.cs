@@ -12,7 +12,7 @@ namespace DataValidationProject.Models
         [Display(Name = "Date of Birth")]
         [Required(ErrorMessage = "Date of Birth is required")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [PastDate(ErrorMessage = "Date of birth must be in past")]
         public DateTime DateOfBirth { get; set; }
 
