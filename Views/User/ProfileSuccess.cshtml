@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Profile Updated";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h2>Success!</h2>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-success">
+                    <h4>Your profile has been successfully updated!</h4>
+                    <p>All validation checks passed successfully. In a real application, your profile information would now be saved to the database.</p>
+                </div>
+
+                <h4 class="mt-4">Advanced Validation Techniques Demonstrated:</h4>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                        <strong>Date Validation:</strong> Custom attribute to ensure date of birth is in the past
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Numeric Range Validation:</strong> Age must be between 18-120, income must be in a valid range
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Cross-Field Validation:</strong> Server-side check to ensure age matches date of birth
+                    </li>
+                    <li class="list-group-item">
+                        <strong>URL Format Validation:</strong> Website must be a valid URL if provided
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Phone Number Validation:</strong> Must be a valid phone format
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Optional vs. Required Fields:</strong> Some fields required, others optional
+                    </li>
+                </ul>
+
+                <div class="text-center">
+                    <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Back to Home</a>
+                    <a asp-action="Profile" asp-controller="User" class="btn btn-secondary">Back to Profile Form</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
